@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'active_support/all'
 require 'active_record'
 
-ActiveRecord::Base.establish_connection(ENV['HEROKU_POSTGRESQL_MAROON_URL'] || 'postgres://localhost/novels_and_novelists')
+ActiveRecord::Base.establish_connection(ENV['HEROKU_POSTGRESQL_RED_URL'] || 'postgres://localhost/novels_and_novelists')
 
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
