@@ -1,4 +1,4 @@
 class Novel < ActiveRecord::Base
 	# attr_accessible :name
-	belongs_to :novelist
+	belongs_to :novelists
 end
