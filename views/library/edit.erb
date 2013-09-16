@@ -1,0 +1,27 @@
+<div class="edit-author"></div>
+<form class="edit-novelist" action="/library/<%= @novelist.id %>" method="post">
+	<h2>Edit Novelist</h2>
+	<div class="novelist_name_input_container">
+		<label for="name">Name:</label>
+		<input type="text" name="novelist[name]" value="<%= @novelist.name %>"/>
+	</div>
+	<div class="novelist_gender_input_container">
+		<label for="gender">Gender:</label>
+		<input type="text" name="novelist[gender]" value="<%= @novelist.gender %>"/>
+	</div>
+	<div class="novelist_dob_input_container">
+		<label for="date_of_birth">Born:</label>
+		<input type="text" name="novelist[born]" value="<%= @novelist.born %>"/>
+	</div>
+	<div class="novelist_dod_input_container">
+		<label for="date_of_birth">Died:</label>
+		<input type="text" name="novelist[died]" value="<%= @novelist.died %>"/>
+	</div>
+	<div class="novelist_nationality_input_container">
+		<label for="nationality">Gender:</label>
+		<input type="text" name="novelist[nationality]" value="<%= @novelist.nationality %>"/>
+	</div>
+	<button type="submit">Submit</button>
+	<br>
+	<a href="/library/<%= @novelist.id %>/delete">Delete</a> | <a href="/">Cancel</a>
+</form>

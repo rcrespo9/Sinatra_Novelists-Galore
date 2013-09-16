@@ -1,0 +1,30 @@
+<div class="show">
+<div class="bio">
+  <h2 class="novelist_name"><%= @novelist.name %></h2>
+  <h4 class="novelist_gender">Gender: <%= @novelist.gender %></h4>
+  <h4 class="novelist_born">Born: <%= @novelist.born %></h4>
+  <h4 class="novelist_died">Died: <%= @novelist.died %></h4>
+  <h4 class="novelist_nationality">Nationality: <%= @novelist.nationality %></h4>
+</div>
+
+<div class="novelist-books">
+   <% if !@novelist.novels.empty? %>
+    <br>
+    <br>
+    <h2>Books</h2>
+    <% @novelist.novels.each do |novel| %>
+  <h4 class="novel_title">Title: <%= novel.title %></h4>
+  <h4 class="novel_year_published">Year Published: <%= novel.year_published %></h4>
+  <h4 class="novel_genre">Genre: <%= novel.genre %></h4>
+  <br>
+<% end %>
+<% end %>
+</div>
+  
+  <nav>
+  <ul>
+  <li><a href="/library/<%= @novelist.id %>/new_novel">Add Novel</a></li> 
+  <li><a href="/library/<%= @novelist.id %>/edit">Edit</a></li>
+  </ul>
+  </nav>
+</div>

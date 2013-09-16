@@ -1,0 +1,29 @@
+<div class="container">
+<div class="intro">
+	<div class="motto">
+	<h2>
+		<span>
+			Create Your Favorite Novelists
+			<br>
+			And Their Wondrous Novels.
+			<br>
+			<br>
+			<a href="/library/new">Start Now!</a>
+		</span> 
+	</h2>
+	</div>
+</div>
+
+<div class="wall">
+<div class="novelists">
+	<h2>Wall of Novelists</h2>
+	  <% @nav_novelists.each do |novelist| %>
+	    <div class="novelist">
+	        <h3 class="novelist-name">
+				<a href="/library/<%= novelist.id %>"><%= novelist.name %></a>
+			</h3>
+		</div>
+	<% end %>
+</div>
+</div>
+</div>

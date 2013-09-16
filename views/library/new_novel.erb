@@ -1,0 +1,18 @@
+<div class="new-book">
+<form class="new-novel" method="post" action='/library/<%= @novelist_id %>/create_novel'>
+	<h2>Create Novel</h2>
+  <div id="title">
+	<label>Title:</label>
+	<input type="text" name="novel[title]" autofocus>
+  </div>
+  <div id="year_published">
+	<label>Year Published:</label>
+	<input type="text" name="novel[year_published]">
+  </div>
+  <div id="genre">
+	<label>Genre:</label>
+	<input type="text" name="novel[genre]">
+  </div>
+	<input type="submit" value="Add Novel"/>
+</form>
+</div>
