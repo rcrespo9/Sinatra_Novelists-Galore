@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'active_support/all'
 require 'active_record'
+require 'pg'
 
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
